@@ -3,14 +3,13 @@ import { ThemeProvider } from "@mui/material/styles";
 import { 
   Box, 
   Typography,
-  Stack,
+  Stack, 
     } from "@mui/material";
 import theme from "../components/Theme";
 import Top from "../components/Top/Top";
 import Search from "../components/interfaces/Search/Search";
 import Cards from "../components/MapCards/Cards";
 import '../styles/global.css';
-
 
 
 export default function Home() {
@@ -42,8 +41,9 @@ export default function Home() {
 
           </Box>
      
-        {/* Search */}
-          <Box display='flex' alignItems='center' justifyContent='center' mt='30px'>
+            {/* Search */}
+
+           <Box display='flex' alignItems='center' justifyContent='center' mt='30px'>
 
             <Search />
 
