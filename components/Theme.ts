@@ -3,7 +3,7 @@ import { createTheme } from "@mui/material/styles";
 
 const theme = createTheme({
     typography : {
-        fontFamily: ['Work sans', 'sans-serif'].join(',')
+        fontFamily: ['Inter', 'sans-serif'].join(',')
     },
     palette: {
         primary: {

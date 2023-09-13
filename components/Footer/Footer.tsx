@@ -26,23 +26,13 @@ const Footer: React.FC = () => {
             alignItems="center"
             justifyContent='space-between'>
 
-            <Stack direction='row' spacing={0}  justifyContent='center' alignItems='center'>
+            <Stack direction='row' spacing={0} width='100%' justifyContent='center' alignItems='center'>
 
             <Typography variant='body1' fontSize='25px' color='#000000' fontWeight='300'>
               © 
               </Typography>
               <Typography variant='body1'  fontSize='15px' color='#000000'>
               {new Date().getFullYear()}
-              </Typography>
-              <Typography variant='body1' color='#000000' fontWeight='700' ml='10px'>
-              ESTATE BAPTIST CHURCH
-              </Typography>
-            </Stack>
-
-            <Stack direction='row'  justifyContent='center' alignItems='center'>
-           
-              <Typography variant='body1'  fontSize='15px' color='#000000'>
-                 All right Reserved
               </Typography>
             </Stack>
           

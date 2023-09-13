@@ -2,137 +2,64 @@
 import { ThemeProvider } from "@mui/material/styles";
 import { 
   Box, 
-  Typography, 
-  Stack, 
-  Button, 
-  Grid, 
-  Avatar, 
-  Divider, 
-  Fab,
-  AvatarGroup, 
- } from "@mui/material";
+  Typography,
+  Stack,
+    } from "@mui/material";
 import theme from "../components/Theme";
-import { styled } from '@mui/material/styles';
-import Image from "next/image";
 import Top from "../components/Top/Top";
-import Image1 from '../public/assets/images/image1.jpg';
-import Image2 from '../public/assets/images/image2.jpg';
-import Image3 from '../public/assets/images/image3.jpg';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import TrafficJam from '../public/assets/images/traffic-jam.png';
 import Search from "../components/interfaces/Search/Search";
+import Cards from "../components/MapCards/Cards";
+import '../styles/global.css';
 
-const SignUp = styled(Button)({ 
-  backgroundColor: '#3d5af1',
-  color: '#FFFFFF',
-  fontWeight: '600',
-  borderRadius: '5px',
-  height: '35px',
-  width: '100px',
-  boxShadow: 'none',
-  textTransform: 'none',
-  padding: '6px 12px',
-  lineHeight: 1.5,
-  
-})
 
 
 export default function Home() {
 
   return (
+
     <ThemeProvider theme={theme}>
+
+      <Box className='background' width='100%' height='100%' >
 
       {/* sub nav */}
       <Top />   
 
-      {/* Main body */}
+      <Box height='59vh' display='flex' alignItems='center' justifyContent='center'>
 
-      <Grid container mt='40px'>
+        <Stack direction='column'>
 
-        {/* Grid 1 */}
-        <Grid item md={6} xs={12}>
+          {/* Header */}
+          <Box display='flex' alignItems='center' justifyContent='center' flexDirection='column' gap={2}>
 
-          <Box sx={{paddingLeft: {md: '50px', xs: '20px'}, paddingRight: {md: '50px', xs: '20px'}}}>
+            <Typography className='header_text'  sx={{ fontSize: { md: '100px', xs: '60px'}, textAlign: {md: 'left', xs: 'center'}}} fontWeight='900' marginTop='0px !important' lineHeight='1'>
 
-            <Stack direction='column' spacing={2}>
+                <span style={{color: '#ee8844',}}>TRAFFIC</span> ANALYZER
 
-              <Typography  sx={{fontSize: { md: '90px', xs: '60px'}, textAlign: {md: 'left', xs: 'center'}}} fontWeight='900' marginTop='0px !important' lineHeight='1'>
-                <span style={{color: '#3d5af1'}}>TRAFFIC</span> ANALYZER</Typography>
+            </Typography>
 
-              <Typography sx={{fontSize: { md: '18px', xs: '17px'}, textAlign: {md: 'left', xs: 'center'}}} color='#303a52'>First web-based traffic congestion analyzer. Get accurate prediction traffic sanywhere and at all times</Typography>  
+            <Typography sx={{fontSize: { md: '22px', xs: '17px'}, textAlign: {md: 'center', xs: 'center'}}} color='#595a5c'>First web-based traffic prediction congestion anywhere and at all times using the latest and <br />
+            well known technology all and  every where using latest technology. </Typography>  
 
-              <Stack direction='row' spacing={2} display='flex' alignItems='center' sx={{justifyContent: {xs: 'center'}}}>
+          </Box>
+     
+        {/* Search */}
+          <Box display='flex' alignItems='center' justifyContent='center' mt='30px'>
 
-                <SignUp variant='contained'>Sign Up</SignUp>
+            <Search />
 
-                <Divider variant="middle"  flexItem orientation="vertical"/>
-
-                <GitHubIcon sx={{color: '#303a52'}} />
-
-              </Stack>  
-
-              {/* Avatar */}
-              <Box sx={{ display: {md: 'flex', xs: 'none'}}}>
-
-              <AvatarGroup>
-
-                <Avatar alt="Remy Sharp" src={Image1.src} />
-                <Avatar alt="Travis Howard" src={Image2.src} />
-                <Avatar alt="Travis Howard" src={Image3.src} />
-
-              </AvatarGroup>
-
-              </Box>
-
-            </Stack>
-
-            
           </Box>
 
-        </Grid>
+        </Stack>
 
-        {/* Grid 2 */}
-        <Grid item md={6} xs={12}  alignItems='center' justifyContent='center' sx={{ display: {md: 'flex', xs: 'none'}}}>
+      </Box>
 
-          <Box sx={{ marginTop: {md: '0px', xs: '50px'}}}>
-
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.2231008173553!2d3.4433785239881236!3d7.215372760827155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103a37ca7f70f97b%3A0x2b40dcdd6c8d8279!2sFUNAAB%20International%20School!5e0!3m2!1sen!2sng!4v1693520103356!5m2!1sen!2sng" 
-          width="600" 
-          height="450" 
-          style={{border: '0'}} 
-          allowFullScreen={true}
-          loading="lazy" 
-          referrerPolicy="no-referrer-when-downgrade">
-
-        </iframe>
-
-          </Box> 
-          
-        </Grid>
-
-      </Grid>
+     
+    </Box>
 
 
-      {/* <Divider sx={{ marginTop: '2rem'}} /> */}
+      <Box width='100%' display='flex' justifyContent='center' mt='2.0em'>
 
-
-      <Box display='flex' alignItems='center' justifyContent='center' mt='3em'>
-
-        <Box py='50px' sx={{minWidth: '350px', border: '2px solid #dee1ec', height: '250px', borderRadius: '15px', display:'flex', alignItems: 'center', justifyContent:'center', background: '#f5f5f5'}}>
-
-          <Stack direction='column' spacing={3} display='flex' alignItems='center'>
-          <Image src={TrafficJam}  width={100} height={100} alt='computer-map'/>
-
-            <Typography variant='body1' fontWeight='bold' color='#303a52' sx={{ marginTop:'5px !important'}}>Search location</Typography>
-
-            <Box >
-            <Search />
-            </Box>
-
-           
-          </Stack>   
-
-        </Box>
+        <Cards />
 
       </Box>
 

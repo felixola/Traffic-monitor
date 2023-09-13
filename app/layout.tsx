@@ -1,13 +1,15 @@
-import { Work_Sans } from 'next/font/google';
+import { Inter } from 'next/font/google'
 import Header from '../components/Header/Header';
 import { Divider } from '@mui/material';
+import '../styles/global.css';
 // import Footer from '../components/Footer/Footer';
  
 // If loading a variable font, you don't need to specify the font weight
-const work = Work_Sans({
+const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
 })
+
 
 export const metadata = {
     title:  "Traffic monitor",
@@ -17,7 +19,7 @@ const RootLayout = ({ children, }: { children: React.ReactNode })  => {
 
   return (
 
-    <html lang="en" className={work.className}>
+    <html lang="en" className={inter.className}>
 
         <body>
 
@@ -29,8 +31,10 @@ const RootLayout = ({ children, }: { children: React.ReactNode })  => {
 
                 {children}
 
+                {/* <Divider orientation="horizontal"  flexItem  />
 
-                {/* <Footer /> */}
+
+                <Footer /> */}
                 
             </main>
 

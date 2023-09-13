@@ -7,7 +7,7 @@ import About from '../../app/about/page';
 
 
 interface Route {
-    key: string,
+    id: number,
     title: string,
     path: string,
     component?: FC<{}>,
@@ -17,7 +17,7 @@ interface Route {
 
 export const routes : Array<Route> = [
     {
-        key: "home-route",
+        id: 1,
         title: "Home", 
         path: "/",
         component: Home,
@@ -25,21 +25,21 @@ export const routes : Array<Route> = [
     },
     
     {
-        key: "works-route",
+        id: 2,
         title: "Maps", 
         path: "/works",
         component: Works,
         enable: true,
     },
     {
-        key: "illustrations-route",
+        id: 3,
         title: "Resources", 
         path: "/illustration",
         component: Illustrations,
         enable: true,
     },
     {
-        key: "about-route",
+        id: 4,
         title: "About", 
         path: "/about",
         component: About,
@@ -47,7 +47,7 @@ export const routes : Array<Route> = [
 
     },
     {
-        key: "contact-route",
+        id: 5,
         title: "Contact", 
         path: "/contact",
         component: Contact,

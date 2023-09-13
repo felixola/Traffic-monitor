@@ -2,7 +2,8 @@
 import { styled } from '@mui/material/styles';
 import { ThemeProvider } from "@mui/material/styles";
 import Image from 'next/image';
-import LogoImg from '../../public/assets/images/fender-bender.png'
+import LogoImg from '../../public/assets/images/fender-bender.png';
+import { motion } from "framer-motion"
 import { AppBar, Toolbar, Box, Typography, Stack, Button, useMediaQuery } from "@mui/material";
 import DrawerComponent from '../Drawer/DrawerComp';
 import theme from "../Theme";
@@ -44,8 +45,9 @@ const Header = () => {
 
                         <Stack direction='row' spacing={1} display='flex' alignItems='center'>
 
-                            {/* <Image src={LogoImg} alt='logo-image' width={30} /> */}
-                            <Typography variant="h5" color='#3d5af1' fontWeight='900'>TM</Typography>
+                            <Image src={LogoImg} alt='logo-image' width={30} />
+
+                            <Typography variant="h6" color='#000000' fontWeight='900'>T.M</Typography>
                            
                         </Stack>
 
@@ -70,7 +72,7 @@ const Header = () => {
                             <>
                                                 
                             <Link
-                            key={page.key}
+                            key={page.id}
                             href={page.path} style={{textDecoration: 'none'}}>         
 
                                 <Typography color='#000000' variant="body2" fontWeight='bold'>
@@ -90,7 +92,7 @@ const Header = () => {
 
                         <SearchIcon sx={{color: '#000000'}}/>
         
-                    <SignUp variant='contained'>Sign Up</SignUp>
+                    {/* <SignUp variant='contained'>Sign Up</SignUp> */}
 
                 </Box>
                     
