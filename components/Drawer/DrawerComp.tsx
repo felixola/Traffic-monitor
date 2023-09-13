@@ -31,7 +31,7 @@ const DrawerComponent: React.FC = () => {
            
           <ListItem onClick={() => setOpenDrawer(false)} >
 
-          <Link       key={page.key}
+          <Link       key={page.id}
                       href={page.path}
                       color="black"
                       className='link'>
