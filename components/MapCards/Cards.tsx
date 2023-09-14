@@ -1,23 +1,23 @@
 import Image from 'next/image';
-import Touch from '../../public/assets/images/search-engine.png';
+import Touch from '../../public/assets/images/search.png';
 import Search from '../../public/assets/images/selection.png';
 import Location from '../../public/assets/images/location.png';
-import { Grid, Box, Stack, Typography } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 
 const Cards = () => {
   return (
 
-    <Box sx={{ width: '100%'}} display='flex' justifyContent='center' alignItems='center' gap={4}>
+    <Box sx={{ width: '100%'}} display='flex' justifyContent='center' alignItems='center' gap={1} >
 
         {/* 1 */}
         <Box>
-            <Stack direction='row' spacing={3} display='flex' justifyContent='center' alignItems='center'>
+            <Stack direction='row' spacing={1} display='flex' justifyContent='center' alignItems='center'>
 
                 <Image src={Touch} width={30} alt='touch' />
 
-                <Typography variant='body1'>Search map</Typography>
+                <Typography  sx={{ fontSize: {md: '20px', xs: '15px'}}}>Search</Typography>
 
             </Stack>
         </Box>
@@ -28,11 +28,11 @@ const Cards = () => {
 
          {/* 2 */}
          <Box>
-            <Stack direction='row' spacing={3} display='flex' justifyContent='center' alignItems='center'>
+            <Stack direction='row' spacing={1} display='flex' justifyContent='center' alignItems='center'>
 
                 <Image src={Search} width={30} alt='touch' />
 
-                <Typography variant='body1'>Select desired location</Typography>
+                <Typography variant='body1'>Select</Typography>
 
             </Stack>
         </Box>
@@ -43,11 +43,11 @@ const Cards = () => {
 
          {/* 3 */}
          <Box>
-            <Stack direction='row' spacing={3} display='flex' justifyContent='center' alignItems='center'>
+            <Stack direction='row' spacing={1} display='flex' justifyContent='center' alignItems='center'>
 
                 <Image src={Location} width={30} alt='touch' />
 
-                <Typography variant='body1'>Analyze traffic congestion</Typography>
+                <Typography variant='body1'>Analyze</Typography>
 
             </Stack>
         </Box>

@@ -23,7 +23,7 @@ export default function Home() {
       {/* sub nav */}
       <Top />   
 
-      <Box height='59vh' display='flex' alignItems='center' justifyContent='center'>
+      <Box height='56vh' display='flex' alignItems='center' justifyContent='center'>
 
         <Stack direction='column'>
 
@@ -36,8 +36,12 @@ export default function Home() {
 
             </Typography>
 
-            <Typography sx={{fontSize: { md: '22px', xs: '17px'}, textAlign: {md: 'center', xs: 'center'}}} color='#595a5c'>First web-based traffic prediction congestion anywhere and at all times using the latest and <br />
-            well known technology all and  every where using latest technology. </Typography>  
+            <Box sx={{ paddingLeft: {md: '0px', xs: '20px', }, paddingRight: {md: '0px', xs: '20px'}}}>
+              <Typography sx={{fontSize: { md: '22px', xs: '16px'}, textAlign: {md: 'center', xs: 'center'}}} color='#595a5c'>First web-based on traffic prediction and 
+              known technology where using latest technology. </Typography>  
+            </Box>
+
+            
 
           </Box>
      
@@ -57,7 +61,7 @@ export default function Home() {
     </Box>
 
 
-      <Box width='100%' display='flex' justifyContent='center' mt='2.0em'>
+      <Box width='100%' display='flex' justifyContent='center' mt='0.0em'>
 
         <Cards />
 

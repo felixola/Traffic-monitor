@@ -32,8 +32,8 @@ const Click = styled(Button)({
   backgroundColor: '#ee8844',
   color: '#FFFFFF',
   borderRadius: '12px',
-  height: '58px',
-  width: '58px',
+  height: '59px',
+  width: '59px',
   boxShadow: 'none',
   textTransform: 'none',
   padding: '6px 12px',
@@ -53,11 +53,11 @@ const Search = () => {
             {/* Paper */}
           <Paper
             component="form"
-            sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 450, height: '55px', boxShadow: 'none',  border: '2px solid #dee1ec', borderRadius: '12px'}}>
+            sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', maxWidth: 250, height: '55px', boxShadow: 'none',  border: '2px solid #dee1ec', borderRadius: '12px'}}>
 
               {/* InputBase */}
             <InputBase
-              sx={{ ml: 1, flex: 1 }}
+              sx={{ ml: 2, flex: 1 }}
               placeholder="Search Maps"
               inputProps={{ 'aria-label': 'search google maps' }}/>
 

@@ -3,7 +3,6 @@ import { styled } from '@mui/material/styles';
 import { ThemeProvider } from "@mui/material/styles";
 import Image from 'next/image';
 import LogoImg from '../../public/assets/images/fender-bender.png';
-import { motion } from "framer-motion"
 import { AppBar, Toolbar, Box, Typography, Stack, Button, useMediaQuery } from "@mui/material";
 import DrawerComponent from '../Drawer/DrawerComp';
 import theme from "../Theme";
@@ -12,20 +11,21 @@ import { routes } from '../routes/route';
 import SearchIcon from '@mui/icons-material/Search';
 
 
-const SignUp = styled(Button)({ 
-    border: '2px solid #3d5af1',
-    backgroundColor: '#FFFFFF',
-    color: '#3d5af1',
-    fontWeight: '600',
-    borderRadius: '5px',
-    height: '35px',
-    width: '100px',
-    boxShadow: 'none',
-    textTransform: 'none',
-    padding: '6px 12px',
-    lineHeight: 1.5,
+
+// const SignUp = styled(Button)({ 
+//     border: '2px solid #3d5af1',
+//     backgroundColor: '#FFFFFF',
+//     color: '#3d5af1',
+//     fontWeight: '600',
+//     borderRadius: '5px',
+//     height: '35px',
+//     width: '100px',
+//     boxShadow: 'none',
+//     textTransform: 'none',
+//     padding: '6px 12px',
+//     lineHeight: 1.5,
     
-})
+// })
 
 const Header = () => {
 
@@ -45,7 +45,7 @@ const Header = () => {
 
                         <Stack direction='row' spacing={1} display='flex' alignItems='center'>
 
-                            <Image src={LogoImg} alt='logo-image' width={30} />
+                            {/* <Image src={LogoImg} alt='logo-image' width={30} /> */}
 
                             <Typography variant="h6" color='#000000' fontWeight='900'>T.M</Typography>
                            
@@ -75,7 +75,7 @@ const Header = () => {
                             key={page.id}
                             href={page.path} style={{textDecoration: 'none'}}>         
 
-                                <Typography color='#000000' variant="body2" fontWeight='bold'>
+                                <Typography color='#000000' variant="body2" fontWeight='600'>
 
                                     {page.title}
 

@@ -14,15 +14,15 @@ const Top = () => {
 
     <ThemeProvider theme='theme'>
 
-         <Stack direction='row'>
+         <Stack direction='row' spacing={2} display='flex' alignItems='center'>
 
-            <Box  sx={{paddingLeft: { md: '50px', xs: '27px'}}} py='40px' flexGrow='1'>
+            <Box  sx={{paddingLeft: { md: '50px', xs: '25px'}}} py='40px' flexGrow='1' >
 
               <Stack direction='row' spacing={2} display='flex' alignItems='center'>
 
                   <CircleIcon sx={{color:'#17b978', fontSize: '10px !important',}} /> 
 
-                  <Typography variant="subtitle2" fontWeight='400'>Congestion control</Typography>
+                  <Typography variant="subtitle2" fontWeight='400'>Active</Typography>
 
               </Stack>
             
